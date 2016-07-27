@@ -20,8 +20,8 @@ class ShipDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            self.shipNameLabel.text = "Ship Name: \(self.selectedShip!.name)"
-            self.pirateNameLabel.text = "Pirate Name: \(self.selectedShip!.pirate.name)"
-           // self.propulsionTypeLabel.text = "Propulsion Type: \(self.selectedShip!.engine.propulsionType)"
+        self.shipNameLabel.text = "Ship Name: \(self.selectedShip!.name)"
+        self.pirateNameLabel.text = "Pirate Name: \(self.selectedShip!.pirate.name)"
+        self.propulsionTypeLabel.text = "Propulsion Type: \(self.selectedShip!.engine.propulsionType)"
     }
 }

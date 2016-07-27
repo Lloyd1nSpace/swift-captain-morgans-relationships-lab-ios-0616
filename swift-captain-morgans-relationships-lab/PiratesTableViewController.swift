@@ -15,7 +15,13 @@ class PiratesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.dataStore.fetchData()
+        self.tableView.reloadData()
+        // Ensures the PiratesTableViewController is refreshed with new data if a new Pirate is added.
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,8 +38,15 @@ class PiratesTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationVC = segue.destinationViewController as? ShipsTableViewController
-        let selectedPirateShips = self.dataStore.pirates[self.tableView.indexPathForSelectedRow!.row].ships
-        destinationVC?.pirateShips = selectedPirateShips
+        
+        if segue.identifier == "shipsSegue" {
+            let destinationVC = segue.destinationViewController as? ShipsTableViewController
+            let selectedPirateShips = self.dataStore.pirates[self.tableView.indexPathForSelectedRow!.row].ships
+            destinationVC?.pirateShips = selectedPirateShips
+            // This is ensuring we're associating the correct ships with the correct Pirate & passes it to the ShipsTableViewController
+            destinationVC!.pirate = self.dataStore.pirates[self.tableView.indexPathForSelectedRow!.row]
+        } else if segue.identifier == "addPirate" {
+            let destinationVC = segue.destinationViewController as? AddPirateViewController
+        }
     }
 }

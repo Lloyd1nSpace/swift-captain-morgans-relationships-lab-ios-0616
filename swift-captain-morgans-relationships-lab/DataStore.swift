@@ -16,10 +16,11 @@ class DataStore: NSObject {
     var engines: [Engine] = []
     
     func fetchData() {
-        //
-        if self.pirates.count == 0 || self.ships.count == 0 || self.engines.count == 0 {
-            generateTestData()
-        }
+        
+        //        if self.pirates.count == 0 || self.ships.count == 0 || self.engines.count == 0 {
+        //            generateTestData()
+        //        }
+        // Calling generateTestData() will put in fake information to ensure CoreData is working the way it's supposed to. The project is currently set up to receive custom information.
         
         var catchingError: NSError?
         
@@ -42,7 +43,10 @@ class DataStore: NSObject {
     }
     
     func generateTestData() {
-        
+        testData()
+    }
+    
+    func testData() {
         let pirate1 = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: self.managedObjectContext) as! Pirate
         pirate1.name = "Johnny Thunder"
         
@@ -59,50 +63,65 @@ class DataStore: NSObject {
         ship1.name = "La Amistad"
         ship1.pirate = pirate1
         
-        let ship2 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship2 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship2.name = "City of Norfolk"
         ship2.pirate = pirate1
         
-        let ship3 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship3 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship3.name = "Hannibal"
         ship3.pirate = pirate2
         
-        let ship4 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship4 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship4.name = "Hope"
         ship4.pirate = pirate2
         
-        let ship5 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship5 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship5.name = "Lord Ligonier"
         ship5.pirate = pirate3
         
-        let ship6 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship6 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship6.name = "Wanderer"
         ship6.pirate = pirate3
         
-        let ship7 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship7 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship7.name = "Nightingale"
         ship7.pirate = pirate4
         
-        let ship8 = NSEntityDescription.insertNewObjectForEntityForName(("Ship"), inManagedObjectContext: self.managedObjectContext) as! Ship
+        let ship8 = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: self.managedObjectContext) as! Ship
         ship8.name = "Manuela"
         ship8.pirate = pirate4
         
         let engine1 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
         engine1.propulsionType = "Sail"
         engine1.ship = ship1
-        engine1.ship = ship3
-        engine1.ship = ship5
         
         let engine2 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
         engine2.propulsionType = "Gas"
         engine2.ship = ship2
-        engine2.ship = ship4
-        engine2.ship = ship6
         
         let engine3 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
         engine3.propulsionType = "Electric"
-        engine3.ship = ship7
-        engine3.ship = ship8
+        engine3.ship = ship3
+        
+        let engine4 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
+        engine4.propulsionType = "Sail"
+        engine4.ship = ship4
+        
+        let engine5 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
+        engine5.propulsionType = "Sail"
+        engine5.ship = ship5
+        
+        let engine6 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
+        engine6.propulsionType = "Gas"
+        engine6.ship = ship6
+        
+        let engine7 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
+        engine7.propulsionType = "Electric"
+        engine7.ship = ship7
+        
+        let engine8 = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: self.managedObjectContext) as! Engine
+        engine8.propulsionType = "Sail"
+        engine8.ship = ship8
     }
     
     // MARK: - Core Data Saving support

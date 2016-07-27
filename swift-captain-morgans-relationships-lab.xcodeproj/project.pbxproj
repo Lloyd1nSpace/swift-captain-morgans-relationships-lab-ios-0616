@@ -14,6 +14,8 @@
 		4C45CA941D3A9A7F0030A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA931D3A9A7F0030A41D /* Assets.xcassets */; };
 		4C45CA971D3A9A7F0030A41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */; };
 		6E428A5D1D46D3C7005B3618 /* PiratesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E428A5C1D46D3C7005B3618 /* PiratesTableViewController.swift */; };
+		6E9514331D47F56A00EE34CC /* AddPirateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9514321D47F56A00EE34CC /* AddPirateViewController.swift */; };
+		6E9514351D47F57B00EE34CC /* AddShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9514341D47F57B00EE34CC /* AddShipViewController.swift */; };
 		6EAD87391D46D42A005CF84E /* ShipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD87381D46D42A005CF84E /* ShipsTableViewController.swift */; };
 		6EAD873B1D46D448005CF84E /* ShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD873A1D46D448005CF84E /* ShipDetailViewController.swift */; };
 		6EAD87421D46D556005CF84E /* Engine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD873C1D46D556005CF84E /* Engine+CoreDataProperties.swift */; };
@@ -37,6 +39,8 @@
 		50D55B7A508B0B15369F409C /* Pods-swift-captain-morgans-relationships-lab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-lab.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-lab/Pods-swift-captain-morgans-relationships-lab.release.xcconfig"; sourceTree = "<group>"; };
 		5AB6F59F291B4E86ABBA76CD /* Pods_swift_captain_morgans_relationships_lab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_captain_morgans_relationships_lab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E428A5C1D46D3C7005B3618 /* PiratesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiratesTableViewController.swift; sourceTree = "<group>"; };
+		6E9514321D47F56A00EE34CC /* AddPirateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPirateViewController.swift; sourceTree = "<group>"; };
+		6E9514341D47F57B00EE34CC /* AddShipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddShipViewController.swift; sourceTree = "<group>"; };
 		6EAD87381D46D42A005CF84E /* ShipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipsTableViewController.swift; sourceTree = "<group>"; };
 		6EAD873A1D46D448005CF84E /* ShipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipDetailViewController.swift; sourceTree = "<group>"; };
 		6EAD873C1D46D556005CF84E /* Engine+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Engine+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -95,7 +99,9 @@
 				6EAD87481D46D594005CF84E /* DataStore.swift */,
 				4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */,
 				6E428A5C1D46D3C7005B3618 /* PiratesTableViewController.swift */,
+				6E9514321D47F56A00EE34CC /* AddPirateViewController.swift */,
 				6EAD87381D46D42A005CF84E /* ShipsTableViewController.swift */,
+				6E9514341D47F57B00EE34CC /* AddShipViewController.swift */,
 				6EAD873A1D46D448005CF84E /* ShipDetailViewController.swift */,
 				4C45CA901D3A9A7F0030A41D /* captainMorgan.xcdatamodeld */,
 				6EAD873C1D46D556005CF84E /* Engine+CoreDataProperties.swift */,
@@ -257,11 +263,13 @@
 				6EAD87491D46D594005CF84E /* DataStore.swift in Sources */,
 				4C45CA921D3A9A7F0030A41D /* captainMorgan.xcdatamodeld in Sources */,
 				6EAD87441D46D556005CF84E /* Pirate+CoreDataProperties.swift in Sources */,
+				6E9514351D47F57B00EE34CC /* AddShipViewController.swift in Sources */,
 				6EAD87461D46D556005CF84E /* Ship+CoreDataProperties.swift in Sources */,
 				6EAD87451D46D556005CF84E /* Pirate.swift in Sources */,
 				4C45CA8A1D3A9A7F0030A41D /* AppDelegate.swift in Sources */,
 				6EAD87471D46D556005CF84E /* Ship.swift in Sources */,
 				6EAD87421D46D556005CF84E /* Engine+CoreDataProperties.swift in Sources */,
+				6E9514331D47F56A00EE34CC /* AddPirateViewController.swift in Sources */,
 				6EAD87391D46D42A005CF84E /* ShipsTableViewController.swift in Sources */,
 				6EAD873B1D46D448005CF84E /* ShipDetailViewController.swift in Sources */,
 				6EAD87431D46D556005CF84E /* Engine.swift in Sources */,

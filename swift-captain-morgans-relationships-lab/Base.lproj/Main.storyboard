@@ -5,6 +5,48 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Add Pirate View Controller-->
+        <scene sceneID="KyK-zz-uMm">
+            <objects>
+                <viewController id="9CN-xL-dZy" customClass="AddPirateViewController" customModule="swift_captain_morgans_relationships_lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0zL-UH-43H"/>
+                        <viewControllerLayoutGuide type="bottom" id="UiE-IQ-w14"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d1P-4Q-cu0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pirate Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-EN-nf7">
+                                <rect key="frame" x="29" y="86" width="261" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04b-0f-brO">
+                                <rect key="frame" x="210" y="245" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="9CN-xL-dZy" eventType="touchUpInside" id="YZ0-Y4-ILd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-e1-ZaQ">
+                                <rect key="frame" x="50" y="245" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="9CN-xL-dZy" eventType="touchUpInside" id="ljb-Sa-Hzq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pirateNameTextField" destination="k9W-EN-nf7" id="1OU-4S-cDt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCv-jx-JgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="-681"/>
+        </scene>
         <!--Pirates-->
         <scene sceneID="Dm9-Um-hhp">
             <objects>
@@ -47,7 +89,13 @@
                             <outlet property="delegate" destination="uQf-x4-Xri" id="Z58-7R-Tzj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pirates" id="4sj-RJ-GDs"/>
+                    <navigationItem key="navigationItem" title="Pirates" id="4sj-RJ-GDs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9vo-m5-yTf">
+                            <connections>
+                                <segue destination="9CN-xL-dZy" kind="modal" identifier="addPirate" id="Vpp-UC-Pxd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5c-dS-QEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,6 +169,54 @@
             </objects>
             <point key="canvasLocation" x="1621" y="64"/>
         </scene>
+        <!--Add Ship View Controller-->
+        <scene sceneID="iZD-cR-NP6">
+            <objects>
+                <viewController id="vbD-CK-sM2" customClass="AddShipViewController" customModule="swift_captain_morgans_relationships_lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NVQ-4K-cIg"/>
+                        <viewControllerLayoutGuide type="bottom" id="NTN-Ji-ssA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Qb-4K-d2r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ship Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re3-RS-4Bt">
+                                <rect key="frame" x="28" y="75" width="265" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Engine" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaW-Qe-wZk">
+                                <rect key="frame" x="28" y="224" width="265" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjU-vv-iYE">
+                                <rect key="frame" x="223" y="335" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="vbD-CK-sM2" eventType="touchUpInside" id="l9D-0i-UV0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-K8-cBK">
+                                <rect key="frame" x="64" y="335" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="vbD-CK-sM2" eventType="touchUpInside" id="fxF-ul-jkM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addShipTextField" destination="Re3-RS-4Bt" id="Rcs-Vk-C0F"/>
+                        <outlet property="engineTextField" destination="TaW-Qe-wZk" id="nFt-U4-iCE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zf7-MF-CvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="-681"/>
+        </scene>
         <!--Ships-->
         <scene sceneID="hft-09-HZg">
             <objects>
@@ -164,7 +260,13 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Ships" id="hJY-gC-SCw"/>
+                    <navigationItem key="navigationItem" title="Ships" id="hJY-gC-SCw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mf7-4E-nPO">
+                            <connections>
+                                <segue destination="vbD-CK-sM2" kind="modal" identifier="addShip" id="1mM-Qj-091"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgs-cj-iin" userLabel="First Responder" sceneMemberID="firstResponder"/>
